@@ -3,6 +3,12 @@ export * from "./icons/ArrowTilted"
 export * from "./icons/ArrowLeft"
 export * from "./icons/ArrowRight"
 export * from "./icons/Quotes"
+export * from "./icons/Youtube"
+export * from "./icons/Quotes"
+export * from "./icons/Instagram"
+export * from "./icons/Github"
+export * from "./icons/Facebook"
+
 
 // Layout Components
 export * from "./layout/GradientBackground"

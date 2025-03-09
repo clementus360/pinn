@@ -10,33 +10,34 @@ import Work2 from "@/assets/work-02.png"
 import Work3 from "@/assets/work-03.png"
 import Work4 from "@/assets/work-04.png"
 import Work5 from "@/assets/work-05.png"
+import Link from "next/link";
 
 const works: Work[] = [
   {
-      title: "iBlue Concepts",
-      description: "",
-      image: Work1,
+    title: "iBlue Concepts",
+    description: "",
+    image: Work1,
   },
   {
-      title: "Fitness Point",
-      description: "",
-      image: Work2,
+    title: "Fitness Point",
+    description: "",
+    image: Work2,
   },
   {
-      title: "Ku Giti Cyawe",
-      description: "",
-      image: Work3,
+    title: "Ku Giti Cyawe",
+    description: "",
+    image: Work3,
   },
   {
-      title: "Funky Monkey Arcade",
-      description: "",
-      image: Work4,
+    title: "Funky Monkey Arcade",
+    description: "",
+    image: Work4,
   },
   {
     title: "Smart Home App",
     description: "",
     image: Work5,
-},
+  },
 ]
 
 const testimonials: Testimonial[] = [
@@ -128,7 +129,7 @@ const team: Team[] = [
     position: "CTO, UI/UX Design",
     image: Member3,
   }
-] 
+]
 
 export default function Home() {
 
@@ -139,7 +140,9 @@ export default function Home() {
         <p className="text-center text-primary md:w-8/12">We design with purpose and precision to elevate your brand. From bold ideas to flawless execution, we create experiences that inspire and captivate.</p>
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mt-4">
           <ClientAvatars images={imageUrls} />
-          <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right"> Let&rsquo;s Connect</Button>
+          <Link href={"/contact"}>
+            <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right"> Let&rsquo;s Connect</Button>
+          </Link>
         </div>
       </section>
 
@@ -147,7 +150,9 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start gap-6 w-full">
           <h2 className="text-center md:text-start text-3xl md:text-5xl font-medium text-white">We Give Your Brand the Design It Deserves</h2>
           <p className="text-center md:text-start text-white w-10/12">We blend strategy with creativity to craft designs that don’t just look good—they drive results. From brand identity to digital experiences, we create with purpose, ensuring every detail aligns with your vision and business goals.</p>
-          <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">More About Us</Button>
+          <Link href={"/about-us"}>
+            <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">More About Us</Button>
+          </Link>
         </div>
         <AboutVisuals />
       </section>
@@ -156,7 +161,9 @@ export default function Home() {
         <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
           <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary">Turning Ordinary Into Extraordinary</h2>
           <p className="text-primary md:w-8/12 text-center">Pinn crafts creative solutions that elevate your brand and drive results. Our focus is on delivering designs and strategies that connect with your audience and make a lasting impact.</p>
-          <Button variant="primary" icon={<ArrowTilted />} iconPosition="right">View All</Button>
+          <Link href={"/services"}>
+            <Button variant="primary" icon={<ArrowTilted />} iconPosition="right">View All</Button>
+          </Link>
         </div>
         <div className="flex flex-col md:grid grid-cols-3 gap-8">
           {services.map((service) => (
@@ -166,7 +173,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col md:flex-row items-center gap-8 py-8">
-      <div className="flex flex-nowrap w-full h-96 rounded-4xl overflow-hidden cursor-pointer">
+        <div className="flex flex-nowrap w-full h-96 rounded-4xl overflow-hidden cursor-pointer">
           {works.map((work, index) => (
             <WorksVisuals key={index} title={work.title} description={work.description} image={work.image} />
           ))}
@@ -174,15 +181,16 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start gap-4">
           <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary">Our Works</h2>
           <p className="text-primary text-center md:text-start md:w-8/12">A showcase of creativity, strategy, and impact. Explore our work and see how we bring brands to life through thoughtful design.</p>
-          <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right">View All</Button>
+          <Link href={"/works"}>
+            <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right">View All</Button>
+          </Link>
         </div>
       </section>
 
       <section className="flex flex-col md:flex-row items-center md:gap-8 py-8">
         <div className="flex flex-col items-center w-11/12 md:items-start gap-4">
           <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary">Happy Clients, Even Happier Brands</h2>
-          <p className="text-primary text-center md:text-start md:w-8/12">Don’t just take our word for it—see what our clients have to say. R eal stories from real brands that have experienced the impact of great design.</p>
-          <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right">View All</Button>
+          <p className="text-primary text-center md:text-start md:w-8/12">Don’t just take our word for it—see what our clients have to say. Real stories from real brands that have experienced the impact of great design.</p>
         </div>
         <div className="w-full">
           <Testimonials testimonials={testimonials} />
@@ -206,7 +214,6 @@ export default function Home() {
         <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
           <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary">Meet the Creatives Making It Happen</h2>
           <p className="text-primary md:w-8/12 text-center">Great design doesn’t happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, st yle, and a little bit of magic.</p>
-          <Button variant="primary" icon={<ArrowTilted />} iconPosition="right">View All</Button>
         </div>
         <div className="flex flex-col md:grid grid-cols-3 gap-8">
           {team.map((member, index) => (

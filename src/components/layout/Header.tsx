@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 import { Button } from "../ui/Button";
 import Link from "next/link";
 import { cn } from "@/utils/cn"; // Ensure you have a class merging utility
+import { usePathname } from "next/navigation";
 
 interface NavItem {
     title: string;
@@ -13,13 +14,16 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { title: "About Us", link: "#" },
-    { title: "Our Work", link: "#" },
-    { title: "Our Services", link: "#" },
+    { title: "Home", link: "/" },
+    { title: "About Us", link: "/about" },
+    { title: "Our Work", link: "/work" },
+    { title: "Our Services", link: "/services" },
 ];
 
 export const Header: React.FC = () => {
+
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -33,8 +37,16 @@ export const Header: React.FC = () => {
                 <nav className="hidden md:flex items-center gap-8">
                     <ul className="flex gap-6 text-primary font-medium">
                         {navItems.map((item, index) => (
-                            <li key={index}>
-                                <Link href={item.link} className="hover:text-accent transition">
+                            <li key={index} className={cn(
+                                pathname === item.link ? "border-b-[0.1rem] border-accent transition-all" : ""
+                            )}>
+                                <Link
+                                    href={item.link}
+                                    className={cn(
+                                        "hover:text-accent transition",
+                                        pathname === item.link ? "text-accent font-bold" : ""
+                                    )}
+                                >
                                     {item.title}
                                 </Link>
                             </li>
@@ -43,7 +55,9 @@ export const Header: React.FC = () => {
                 </nav>
 
                 <div className="hidden md:block">
-                    <Button variant="primary">Get Started</Button>
+                    <Link href={"/contact"}>
+                        <Button variant="primary">Get Started</Button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -80,16 +94,25 @@ export const Header: React.FC = () => {
                     <ul className="flex flex-col gap-4 text-primary font-medium">
                         {navItems.map((item, index) => (
                             <li key={index}>
-                                <Link href={item.link} onClick={() => setIsOpen(false)}>
+                                <Link
+                                    href={item.link}
+                                    className={cn(
+                                        pathname === item.link ? "text-accent font-bold border-b-[0.5rem] border-b-accent" : ""
+                                    )}
+                                    onClick={() => setIsOpen(false)}
+                                >
                                     {item.title}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <Button variant="primary" className="mt-4">
-                    Get Started
-                </Button>
+
+                <Link href={"/contact"}>
+                    <Button variant="primary">
+                        Get Started
+                    </Button>
+                </Link>
             </div>
         </header>
     );

@@ -6,8 +6,8 @@ interface ClientAvatarProps {
 
 export const ClientAvatars: React.FC<ClientAvatarProps> = ({ images }) => {
     return (
-        <div>
-            <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-max">
+            <div className="flex items-center justify-center w-max">
                 {images.map((image, index) => (
                     <div
                         key={index}
@@ -19,7 +19,7 @@ export const ClientAvatars: React.FC<ClientAvatarProps> = ({ images }) => {
                     ></div>
                 ))}
             </div>
-            <p className="text-sm font-semibold text-center">10+ Beloved Clients</p>
+            <p className="text-sm font-semibold text-center w-max">10+ Beloved Clients</p>
         </div>
     );
 

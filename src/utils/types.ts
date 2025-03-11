@@ -30,3 +30,8 @@ export interface Work {
     description: string;
     image: StaticImageData;
 }
+
+export interface Tool {
+    name: string;
+    icon: React.ReactNode;
+}

@@ -1,4 +1,4 @@
-import { ArrowTilted, Button, ClientAvatars, Process, ResponsiveVideoPlayer, StatCounter, Youtube } from "@/components";
+import { ArrowTilted, Button, ClientAvatars, Process, ResponsiveVideoPlayer, StatCounter } from "@/components";
 import Link from "next/link";
 
 const imageUrls: string[] = [

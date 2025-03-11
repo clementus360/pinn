@@ -1,9 +1,7 @@
 "use client"
 
-import Image from "next/image";
 import { Tool } from "@/utils/types";
 import { Blender, Figma, Illustrator, InDesign, Photoshop, PremierPro, ImageGallery } from "..";
-import { useState } from "react";
 import { cn } from "@/utils/cn";
 
 const tools: Tool[] = [

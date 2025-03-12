@@ -54,7 +54,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, autopl
             const interval = setInterval(handleNext, 5000);
             return () => clearInterval(interval);
         }
-    }, [autoplay]);
+    }, [autoplay, handleNext]);
 
     const getCardPosition = (index: number) => {
         // Calculate the relative position from active
@@ -75,12 +75,12 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, autopl
 
     return (
         <div
-            className='flex flex-col items-center justify-center gap-2 relative w-full'
+            className='flex flex-col items-center justify-center md:gap-2 relative w-full'
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >
-            <div className='relative flex items-center justify-center w-full h-auto min-h-[20rem] md:min-h-[22rem] px-4 overflow-hidden perspective-distant'>
+            <div className='relative flex items-center justify-center w-full h-auto min-h-[16rem] md:min-h-[22rem] px-4 overflow-hidden perspective-distant'>
                 <AnimatePresence>
                     {testimonials.map((testimonial, index) => {
                         const position = getCardPosition(index);
@@ -130,9 +130,24 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, autopl
                     })}
                 </AnimatePresence>
             </div>
-            <div className="hidden md:flex gap-2 md:gap-4 pt-8 md:pt-12 z-40">
-                <Button onClick={handlePrev} variant={'dark-outline'} icon={<ArrowLeft />} iconPosition='right'>Previous</Button>
+            <div className="hidden md:flex  gap-0 md:gap-4 pt-8 md:pt-12 z-40">
+                <Button onClick={handlePrev} variant={'dark-outline'} icon={<ArrowLeft />} iconPosition='left'>Previous</Button>
                 <Button onClick={handleNext} variant={'dark-outline'} icon={<ArrowRight />} iconPosition='right'>Next</Button>
+            </div>
+
+            <div className='flex flex-col md:hidden w-full gap-4'>
+                <button onClick={handlePrev} className='flex items-center justify-center py-2 w-full border-[0.2rem] border-primary rounded-full'>
+                    Previous
+                    <span className='w-8 h-8 text-primary overflow-hidden'>
+                        <ArrowRight />
+                    </span>
+                </button>
+                <button onClick={handleNext} className='flex items-center justify-center py-2 w-full border-[0.2rem] border-primary rounded-full'>
+                    Next
+                    <span className='w-8 h-8 text-primary overflow-hidden'>
+                        <ArrowRight />
+                    </span>
+                </button>
             </div>
         </div>
     )

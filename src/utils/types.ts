@@ -7,7 +7,7 @@ export interface Testimonial {
     image: string;
 }
 
-export interface Service {
+export interface Services {
     index: number;
     title: string;
     description: string;
@@ -34,4 +34,17 @@ export interface Work {
 export interface Tool {
     name: string;
     icon: React.ReactNode;
+}
+
+interface Perk {
+    title: string;
+    description: string
+}
+
+export interface ServiceType {
+    title: string;
+    description: string;
+    cta: string;
+    perks: Perk[];
+    image: StaticImageData;
 }

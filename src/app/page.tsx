@@ -1,5 +1,5 @@
 import { Button, ArrowTilted, ClientAvatars, AboutVisuals, ServiceCard, WorksVisuals, Testimonials, FAQs, FAQVisuals, TeamCard } from "@/components";
-import { FAQ, Service, Team, Testimonial, Work } from "@/utils/types";
+import { FAQ, Services, Team, Testimonial, Work } from "@/utils/types";
 
 import Member1 from "@/assets/member.png"
 import Member2 from "@/assets/member2.png"
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
   }
 ]
 
-const services: Service[] = [
+const services: Services[] = [
   {
     index: 1,
     title: "Brand Identity",

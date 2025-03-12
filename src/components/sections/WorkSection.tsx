@@ -3,6 +3,7 @@
 import { Tool } from "@/utils/types";
 import { Blender, Figma, Illustrator, InDesign, Photoshop, PremierPro, ImageGallery } from "..";
 import { cn } from "@/utils/cn";
+import { AfterEffects } from "../icons/Aftereffects";
 
 const tools: Tool[] = [
     {
@@ -28,6 +29,10 @@ const tools: Tool[] = [
     {
         name: "Figma",
         icon: <Figma />
+    },
+    {
+        name: "After Effects",
+        icon: <AfterEffects />
     }
 ]
 
@@ -45,8 +50,6 @@ const getToolIcon = (toolName: string) => {
     const tool = tools.find(t => t.name.toLowerCase() === toolName.toLowerCase());
     return tool ? tool.icon : null;
 };
-
-
 
 
 export const WorkSection: React.FC<WorkSectionProps> = ({ title, description, tools, tags, images, variant }) => {

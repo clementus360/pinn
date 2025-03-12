@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({ variant, size, icon, iconPositio
                 <span
                     className={
                         cn(
-                            "w-4 h-4",
+                            "flex items-center justify-center w-4 h-4",
                             variant === "primary" && "text-white",
                             variant === "secondary" && "text-white",
                             variant === "outline" && "text-accent",

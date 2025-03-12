@@ -16,6 +16,7 @@ export * from "./icons/Figma"
 export * from "./icons/Blender"
 export * from "./icons/Play"
 export * from "./icons/Pause"
+export * from "./icons/Check"
 
 // Layout Components
 export * from "./layout/GradientBackground"
@@ -34,6 +35,7 @@ export * from "./ui/FAQVisuals"
 export * from "./ui/StatCounter"
 export * from "./ui/ResponsiveVideoPlayer"
 export * from "./ui/Process"
+export * from "./ui/Service"
 
 // Cards Components
 export * from "./cards/ServiceCard"

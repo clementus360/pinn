@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
                                 <Link
                                     href={item.link}
                                     className={cn(
-                                        pathname === item.link ? "text-accent font-bold border-b-[0.5rem] border-b-accent" : ""
+                                        pathname === item.link ? "text-accent font-bold border-b-[0.1rem] border-b-accent" : ""
                                     )}
                                     onClick={() => setIsOpen(false)}
                                 >

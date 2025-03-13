@@ -5,40 +5,39 @@ import Member1 from "@/assets/member.png"
 import Member2 from "@/assets/member2.png"
 import Member3 from "@/assets/member3.png"
 
-import Work1 from "@/assets/work-01.png"
-import Work2 from "@/assets/work-02.png"
-import Work3 from "@/assets/work-03.png"
-import Work4 from "@/assets/work-04.png"
-import Work5 from "@/assets/work-05.png"
 import Link from "next/link";
 
 const works: Work[] = [
   {
     title: "iBlue Concepts",
     description: "",
-    image: Work1,
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850572/Pinn/pqhyutublbe3jhm6iu7r.png",
   },
   {
     title: "Fitness Point",
     description: "",
-    image: Work2,
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850572/Pinn/fielqz0oem0e6euygujd.png",
   },
   {
     title: "Ku Giti Cyawe",
     description: "",
-    image: Work3,
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850571/Pinn/scht82p3op9x9neaz8yg.png",
   },
   {
     title: "Funky Monkey Arcade",
     description: "",
-    image: Work4,
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850571/Pinn/qdexqb4pipmjddwmiijw.png",
   },
   {
     title: "Smart Home App",
     description: "",
-    image: Work5,
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850573/Pinn/xwibsnb9imged1ebispt.png",
   },
 ]
+
+const teamImage: string = "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850753/team_brcb76.png"
+
+const workspaceImage: string = "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850745/workspace_uhdu9c.png"
 
 const testimonials: Testimonial[] = [
   {
@@ -113,6 +112,8 @@ const faqs: FAQ[] = [
   }
 ];
 
+const faqImage: string = "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741850754/FAQs_bno8wq.png"
+
 const team: Team[] = [
   {
     name: "Dismas Mutambiyineza",
@@ -154,7 +155,7 @@ export default function Home() {
             <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">More About Us</Button>
           </Link>
         </div>
-        <AboutVisuals />
+        <AboutVisuals teamImage={teamImage} workspaceImage={workspaceImage} />
       </section>
 
       <section className="flex flex-col gap-12 px-4 md:px-16 py-12 items-center justify-center h-max">
@@ -198,7 +199,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col max-h-max gap-16 md:gap-20 md:flex-row px-4 md:px-16 py-12 bg-primary rounded-4xl transition-all">
-        <FAQVisuals />
+        <FAQVisuals image={faqImage} />
         <div className="flex w-full flex-col justify-center gap-8 md:gap-4">
           <h2 className="text-center md:text-start md:w-10/12 text-4xl md:text-5xl font-medium text-white">FAQs</h2>
 

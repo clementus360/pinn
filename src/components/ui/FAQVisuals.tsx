@@ -1,8 +1,11 @@
 import Image from 'next/image'
-import FAQImage from '@/assets/FAQs.png'
 
-export const FAQVisuals = () => {
+interface FAQVisualProps {
+  image: string
+}
+
+export const FAQVisuals: React.FC<FAQVisualProps> = ({ image }) => {
   return (
-    <Image src={FAQImage} alt={'FAQs'} className='w-full md:w-[30vw] h-full rounded-3xl'/> 
+    <Image height={400} width={400} src={image} alt={'FAQs'} className='w-full md:w-[30vw] h-full rounded-3xl' />
   )
 }

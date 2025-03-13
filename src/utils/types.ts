@@ -28,7 +28,7 @@ export interface Team {
 export interface Work {
     title: string;
     description: string;
-    image: StaticImageData;
+    image: string;
 }
 
 export interface Tool {
@@ -46,5 +46,5 @@ export interface ServiceType {
     description: string;
     cta: string;
     perks: Perk[];
-    image: StaticImageData;
+    image: string;
 }

@@ -2,11 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Image from 'next/image'
-import TeamImage from '@/assets/team.png'
-import WorkspaceImage from '@/assets/workspace.png'
+
+
 import { cn } from "@/utils/cn";
 
-export const AboutVisuals = () => {
+interface AboutVisualsProps {
+    teamImage: string;
+    workspaceImage: string;
+}
+
+export const AboutVisuals: React.FC<AboutVisualsProps> = ({ teamImage, workspaceImage }) => {
     // State to track mouse position
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -45,7 +50,9 @@ export const AboutVisuals = () => {
     return (
         <div className="relative flex items-end justify-end w-full">
             <Image
-                src={TeamImage}
+                height={200}
+                width={200}
+                src={teamImage}
                 alt={'Team'}
                 className={cn(
                     "absolute bottom-12 left-24 w-5/12 rounded-2xl ",
@@ -54,7 +61,9 @@ export const AboutVisuals = () => {
                 style={teamImageTransform}
             />
             <Image
-                src={WorkspaceImage}
+                height={400}
+                width={400}
+                src={workspaceImage}
                 alt={'Workspace'}
                 className={cn(
                     "object-cover w-8/12 h-[24rem] rounded-4xl",

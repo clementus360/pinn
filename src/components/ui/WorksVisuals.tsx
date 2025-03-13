@@ -1,9 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface WorkVisualsProps {
     title: string;
     description: string;
-    image: StaticImageData;
+    image: string;
 }
 export const WorksVisuals: React.FC<WorkVisualsProps> = ({title, description, image}) => {
     return (
@@ -12,7 +12,7 @@ export const WorksVisuals: React.FC<WorkVisualsProps> = ({title, description, im
                 <h3 className="text-xl font-semibold">{title}</h3>
                 <p>{description && description}</p>
             </div>
-            <Image src={image} alt={title} className="w-full h-full object-cover" />
+            <Image  height={400} width={400} src={image} alt={title} className="w-full h-full object-cover" />
         </div>
     )
 }

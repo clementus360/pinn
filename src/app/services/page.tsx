@@ -1,11 +1,6 @@
 import { Service } from "@/components";
 import { ServiceType } from "@/utils/types";
 
-import WebImage from "@/assets/web.png"
-import SocialImage from "@/assets/social.png"
-import BrandImage from "@/assets/branding.png"
-
-
 const services: ServiceType[] = [
     {
         title: "Logo & Branding",
@@ -29,7 +24,7 @@ const services: ServiceType[] = [
                 description: "Positioning your brand for success with a strong, cohesive identity."
             },
         ],
-        image: BrandImage
+        image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741851334/branding_c2fypi.png"
     },
     {
         title: "Web Design",
@@ -57,7 +52,7 @@ const services: ServiceType[] = [
                 description: "We make sure your website is optimized for search engines, so you get found by your audience."
             },
         ],
-        image: WebImage
+        image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741851333/web_st3zkc.png"
     },
     {
         title: "Social Media Marketing",
@@ -85,7 +80,7 @@ const services: ServiceType[] = [
                 description: "We track performance and tweak strategies to ensure your social media is always evolving and improving."
             },
         ],
-        image: SocialImage
+        image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1741851325/social_leb6ou.png"
     }
 ]
 
@@ -100,7 +95,7 @@ export default function Page() {
 
             <section className="flex w-full flex-col items-center justify-center gap-24 ">
                 {services.map((service, index) => (
-                    <Service key={index}  title={service.title} description={service.description} cta={service.cta} perks={service.perks} image={service.image} variant={index%2===0? "right":"left"} />
+                    <Service key={index} title={service.title} description={service.description} cta={service.cta} perks={service.perks} image={service.image} variant={index % 2 === 0 ? "right" : "left"} />
                 ))}
             </section>
         </div>

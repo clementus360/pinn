@@ -1,6 +1,6 @@
 "use client"
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowTilted, Button, Check } from "..";
 
@@ -17,7 +17,7 @@ export interface ServiceProps {
     description: string;
     cta: string;
     perks: Perk[];
-    image: StaticImageData
+    image: string
     variant: "left" | "right"
 }
 
@@ -40,7 +40,7 @@ export const Service: React.FC<ServiceProps> = ({ title, description, cta, perks
                 }}
                 className={`min-w-[40vw] w-full rounded-4xl rounded-tl-[10rem]`}
             >
-                <Image src={image} alt={title} className="abdolute w-[200%]" />
+                <Image width={600} height={600} src={image} alt={title} className="abdolute w-[200%]" />
             </motion.div>
 
             <div className="flex flex-col gap-4">

@@ -54,7 +54,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, autopl
             const interval = setInterval(handleNext, 5000);
             return () => clearInterval(interval);
         }
-    }, [autoplay, handleNext]);
+    }, [autoplay]);
 
     const getCardPosition = (index: number) => {
         // Calculate the relative position from active

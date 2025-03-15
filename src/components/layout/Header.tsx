@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
 import { Button } from "../ui/Button";
 import Link from "next/link";
 import { cn } from "@/utils/cn"; // Ensure you have a class merging utility

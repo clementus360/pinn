@@ -135,10 +135,10 @@ const team: Team[] = [
 export default function Home() {
 
   return (
-    <div className="flex flex-col gap-4 text-primary px-4 md:px-16 pb-16">
+    <div className="flex flex-col gap-4 text-primary dark:text-white px-4 md:px-16 pb-16">
       <section className="flex flex-col gap-4 px-4 md:px-40 py-24 md:py-32 items-center justify-center h-max">
-        <h1 className="text-4xl md:text-6xl text-center font-medium text-primary">Creativity That Stands Out, Design That Pinns It Together.</h1>
-        <p className="text-center text-primary md:w-8/12">We design with purpose and precision to elevate your brand. From bold ideas to flawless execution, we create experiences that inspire and captivate.</p>
+        <h1 className="text-4xl md:text-6xl text-center font-medium text-primary dark:text-white">Creativity That Stands Out, Design That Pinns It Together.</h1>
+        <p className="text-center text-primary dark:text-white md:w-8/12">We design with purpose and precision to elevate your brand. From bold ideas to flawless execution, we create experiences that inspire and captivate.</p>
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center mt-4">
           <ClientAvatars images={imageUrls} />
           <Link href={"/contact"}>
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start gap-6 w-full">
           <h2 className="text-center md:text-start text-3xl md:text-5xl font-medium text-white">We Give Your Brand the Design It Deserves</h2>
           <p className="text-center md:text-start text-white w-10/12">We blend strategy with creativity to craft designs that don’t just look good—they drive results. From brand identity to digital experiences, we create with purpose, ensuring every detail aligns with your vision and business goals.</p>
-          <Link href={"/about-us"}>
+          <Link href={"/about"}>
             <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">More About Us</Button>
           </Link>
         </div>
@@ -160,8 +160,8 @@ export default function Home() {
 
       <section className="flex flex-col gap-12 px-4 md:px-16 py-12 items-center justify-center h-max">
         <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
-          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary">Turning Ordinary Into Extraordinary</h2>
-          <p className="text-primary md:w-8/12 text-center">Pinn crafts creative solutions that elevate your brand and drive results. Our focus is on delivering designs and strategies that connect with your audience and make a lasting impact.</p>
+          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary dark:text-white">Turning Ordinary Into Extraordinary</h2>
+          <p className="text-primary dark:text-white md:w-8/12 text-center">Pinn crafts creative solutions that elevate your brand and drive results. Our focus is on delivering designs and strategies that connect with your audience and make a lasting impact.</p>
           <Link href={"/services"}>
             <Button variant="primary" icon={<ArrowTilted />} iconPosition="right">View All</Button>
           </Link>
@@ -180,8 +180,8 @@ export default function Home() {
           ))}
         </div>
         <div className="flex flex-col items-center md:items-start gap-4">
-          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary">Our Works</h2>
-          <p className="text-primary text-center md:text-start md:w-8/12">A showcase of creativity, strategy, and impact. Explore our work and see how we bring brands to life through thoughtful design.</p>
+          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary dark:text-white">Our Works</h2>
+          <p className="text-primary dark:text-white text-center md:text-start md:w-8/12">A showcase of creativity, strategy, and impact. Explore our work and see how we bring brands to life through thoughtful design.</p>
           <Link href={"/works"}>
             <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right">View All</Button>
           </Link>
@@ -190,8 +190,8 @@ export default function Home() {
 
       <section className="flex flex-col md:flex-row items-center md:gap-8 py-8">
         <div className="flex flex-col items-center w-11/12 md:items-start gap-4">
-          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary">Happy Clients, Even Happier Brands</h2>
-          <p className="text-primary text-center md:text-start md:w-8/12">Don’t just take our word for it—see what our clients have to say. Real stories from real brands that have experienced the impact of great design.</p>
+          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary dark:text-white">Happy Clients, Even Happier Brands</h2>
+          <p className="text-primary dark:text-white text-center md:text-start md:w-8/12">Don’t just take our word for it—see what our clients have to say. Real stories from real brands that have experienced the impact of great design.</p>
         </div>
         <div className="w-full">
           <Testimonials testimonials={testimonials} />
@@ -213,8 +213,8 @@ export default function Home() {
 
       <section className="flex flex-col gap-12 py-12 items-center justify-center h-max">
         <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
-          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary">Meet the Creatives Making It Happen</h2>
-          <p className="text-primary md:w-8/12 text-center">Great design doesn’t happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, st yle, and a little bit of magic.</p>
+          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary dark:text-white">Meet the Creatives Making It Happen</h2>
+          <p className="text-primary dark:text-white md:w-8/12 text-center">Great design doesn’t happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, st yle, and a little bit of magic.</p>
         </div>
         <div className="flex flex-col md:grid grid-cols-3 gap-8">
           {team.map((member, index) => (

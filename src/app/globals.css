@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --primary: #031525;
   --accent: #0096FF;
   --font-gilroy: 'Gilroy', sans-serif;
-
-  --background-glow: linear-gradient(90deg, #0095ff00 0%,#0095ff4d 50%, #0095ff00 100%);
+  --background-glow: linear-gradient(90deg, #0095ff00 0%, #0095ff1a 50%, #0095ff00 100%);
 }
 
-@theme inline{
+@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -18,29 +19,40 @@
   --font-sans: var(--font-gilroy);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background-glow);
+  background: linear-gradient(320deg, #0095ff00 0%, #0095ff7b 20%, #0095ff00 80%);
+  background-size: 200% 200%;
   color: var(--foreground);
   font-family: var(--font-gilroy), sans-serif !important;
-  animation: gradientAnimation 6s ease infinite;
+  background-attachment: fixed;
+  animation: gradientAnimation 8s ease-in-out infinite alternate;
+}
+
+/* Apply dark mode using .dark instead of @media */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --background-glow: linear-gradient(320deg, #031525 0%, #031525 50%, #031525 100%);
+
+  /* Override body background in dark mode */
+  background: linear-gradient(320deg, #031525 0%, #031525 20%, #031525 80%);
+}
+
+.dark body {
+  background: linear-gradient(320deg, #0095ff00 0%, #0095ff22 20%, #0095ff00 80%);
+  background-size: 200% 200%;
+  color: var(--foreground);
+  font-family: var(--font-gilroy), sans-serif !important;
+  background-attachment: fixed;
+  animation: gradientAnimation 8s ease-in-out infinite alternate;
 }
 
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
-  50% {
+
+  100% {
     background-position: 100% 50%;
   }
-  100% {
-    background-position: 0% 50%;
-  }
 }
-

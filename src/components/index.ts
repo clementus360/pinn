@@ -1,4 +1,5 @@
 // Icon Components
+export * from "./icons/Logo"
 export * from "./icons/ArrowTilted"
 export * from "./icons/ArrowLeft"
 export * from "./icons/ArrowRight"
@@ -17,6 +18,13 @@ export * from "./icons/Blender"
 export * from "./icons/Play"
 export * from "./icons/Pause"
 export * from "./icons/Check"
+export * from "./icons/BehanceOutline"
+export * from "./icons/TwitterOutline"
+export * from "./icons/LinkedinOutline"
+export * from "./icons/InstagramOutline"
+export * from "./icons/GithubOutline"
+export * from "./icons/DarkMode"
+export * from "./icons/LightMode"
 
 // Layout Components
 export * from "./layout/GradientBackground"
@@ -36,6 +44,7 @@ export * from "./ui/StatCounter"
 export * from "./ui/ResponsiveVideoPlayer"
 export * from "./ui/Process"
 export * from "./ui/Service"
+export * from "./ui/ThemeToggle"
 
 // Cards Components
 export * from "./cards/ServiceCard"

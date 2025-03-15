@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
                     </Link>
                 </div>
 
-                <p className='text-center'>©2025 Pinn Creative Hub, All Rights Reserved</p>
+                <p className='text-center text-white dark:text-white'>©2025 Pinn Creative Hub, All Rights Reserved</p>
             </div>
         </footer>
     );

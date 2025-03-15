@@ -55,7 +55,7 @@ const getToolIcon = (toolName: string) => {
 export const WorkSection: React.FC<WorkSectionProps> = ({ title, description, tools, tags, images, variant }) => {
     return (
         <section className={cn(
-            "flex flex-col-reverse md:flex-row gap-8 md:gap-24 px-4 md:px-40 py-8 items-center justify-between text-primary",
+            "flex flex-col-reverse md:flex-row gap-8 md:gap-24 px-4 md:px-40 py-8 items-center justify-between text-primary dark:text-white",
             variant === "left" ? "md:flex-row" : "md:flex-row-reverse"
         )}>
             <div className="w-full">

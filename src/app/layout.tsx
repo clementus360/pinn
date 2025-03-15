@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import { GradientBackground, Footer, Header } from "@/components";
 import { CTA } from "@/components/layout/CTA";
+import { ThemeProvider } from "@/context/theme-provider";
 
 const gilroy = localFont({
   src: [
@@ -56,14 +57,16 @@ export default function RootLayout({
       <body
         className={`${gilroy.variable} antialiased`}
       >
-        <GradientBackground>
-          <Header />
-          <div className="pt-24">
-            {children}
-          </div>
-          <CTA/>
-          <Footer />
-        </GradientBackground>
+        <ThemeProvider defaultTheme="system" storageKey="pinn-theme">
+          <GradientBackground>
+            <Header />
+            <div className="pt-24">
+              {children}
+            </div>
+            <CTA />
+            <Footer />
+          </GradientBackground>
+        </ThemeProvider>
       </body>
     </html>
   );

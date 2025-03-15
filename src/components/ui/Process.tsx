@@ -8,10 +8,10 @@ interface ProcessStepProps {
 
 const ProcessStep: React.FC<ProcessStepProps> = ({ title, steps, linesCount }) => {
     return (
-        <div className="flex flex-col w-full text-primary gap-4">
-            <p className="font-semibold text-center">{title}</p>
+        <div className="flex flex-col w-full text-primary dark:text-white gap-4">
+            <p className="font-semibold text-center dark:text-white">{title}</p>
             <div className="flex flex-col gap-4 md:gap-16">
-                <div className="border-t-2 border-x-2 border-primary h-8 rounded-t-xl md:rounded-t-4xl"></div>
+                <div className="border-t-2 border-x-2 border-primary dark:border-white h-8 rounded-t-xl md:rounded-t-4xl"></div>
                 <div className="relative flex justify-between w-full h-full">
                     <div className="absolute z-10 md:top-12 w-full h-max flex p-2 items-center justify-center gap-2 md:gap-0">
                         {steps.map((step, index) => (
@@ -22,7 +22,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({ title, steps, linesCount }) =
                     </div>
                     <div className="flex absolute justify-between w-full h-16 md:h-40">
                         {Array.from({ length: linesCount }).map((_, index) => (
-                            <div key={index} className="bg-primary w-px h-full"></div>
+                            <div key={index} className="bg-primary dark:bg-white dark:border-white w-px h-full"></div>
                         ))}
                     </div>
                 </div>

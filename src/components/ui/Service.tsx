@@ -44,7 +44,7 @@ export const Service: React.FC<ServiceProps> = ({ title, description, cta, perks
             </motion.div>
 
             <div className="flex flex-col gap-4">
-                <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-3xl font-medium text-primary">{title}</h2>
+                <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-3xl font-medium text-primary dark:text-white">{title}</h2>
                 <p>{description}</p>
 
                 <div className="flex flex-col gap-2">

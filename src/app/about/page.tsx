@@ -58,9 +58,9 @@ const videoSrc = "http://commondatastorage.googleapis.com/gtv-videos-bucket/samp
 export default function About() {
     return (
         <div className="flex flex-col gap-16 pb-24 px-4 md:px-24">
-            <section className="flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-16 px-4 py-24 md:py-24 items-center justify-center h-max text-primary">
+            <section className="flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-16 px-4 py-24 md:py-24 items-center justify-center h-max text-primary dark:text-white">
                 <div className="flex flex-col gap-8 items-center md:items-start justify-between">
-                    <h1 className="text-4xl md:text-6xl text-center md:text-start  font-medium text-primary">Redefining Creativity, One Design at a Time</h1>
+                    <h1 className="text-4xl md:text-6xl text-center md:text-start font-medium text-primary dark:text-white">Redefining Creativity, One Design at a Time</h1>
                     <Link href={"/contact"}>
                         <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right"> Let&rsquo;s Connect</Button>
                     </Link>
@@ -68,7 +68,7 @@ export default function About() {
 
                 <div className="flex flex-col items-center md:items-start gap-4">
                     <ClientAvatars images={imageUrls} />
-                    <p className="text-center md:text-start text-primary">Hi, we’re Pinn Creative—a collective of designers, strategists, and storytellers passionate about crafting bold, impactful brand experiences. From identity design to digital solutions, we bring ideas to life with precision, creativity, and purpose. Let’s create something unforgettable together.</p>
+                    <p className="text-center md:text-start text-primary dark:text-white">Hi, we’re Pinn Creative—a collective of designers, strategists, and storytellers passionate about crafting bold, impactful brand experiences. From identity design to digital solutions, we bring ideas to life with precision, creativity, and purpose. Let’s create something unforgettable together.</p>
                 </div>
             </section>
 
@@ -76,19 +76,19 @@ export default function About() {
                 <ResponsiveVideoPlayer videoSrc={videoSrc} />
             </section>
 
-            <section className="flex flex-col items-center md:items-start md:flex-row justify-center text-primary">
+            <section className="flex flex-col items-center md:items-start md:flex-row justify-center text-primary dark:text-white">
                 {stats.map((stat, index) => (
                     <StatCounter key={index} index={index} title={stat.title} value={stat.value} type={stat.type} />
                 ))}
             </section>
 
-            <section className="flex flex-col gap-16 px-4 md:px-16 items-center py-16 border-2 border-primary rounded-4xl">
-                <h2 className="md:w-10/12 text-center text-2xl md:text-4xl font-medium text-primary">Design Process</h2>
+            <section className="flex flex-col gap-16 px-4 md:px-16 items-center py-16 border-2 border-primary dark:border-white rounded-4xl">
+                <h2 className="md:w-10/12 text-center text-2xl md:text-4xl font-medium text-primary dark:text-white">Design Process</h2>
                 <Process />
             </section>
 
             <section className="flex flex-col gap-16">
-                <h2 className="text-center text-2xl md:text-4xl font-medium text-primary">Proudly Collaborated With</h2>
+                <h2 className="text-center text-2xl md:text-4xl font-medium text-primary dark:text-white">Proudly Collaborated With</h2>
 
                 <div className="flex w-full overflow-scroll items-center justify-center gap-16 md:gap-24">
                     {partners.map((partner, index) => (

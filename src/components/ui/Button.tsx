@@ -6,15 +6,15 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     size?: "sm" | "md" | "lg" | "xl";
     icon?: React.ReactNode;
     iconPosition?: "left" | "right";
+    disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ variant, size, icon, iconPosition = "right", children, className, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ variant, size, icon, iconPosition = "right", disabled, children, className, ...props }) => {
     return (
         <button
             className={
                 cn(
                     "flex w-max gap-2 justify-center items-center px-12 py-2 rounded-full cursor-pointer font-semibold",
-                    className,
                     variant === "primary" && "bg-primary dark:bg-accent text-white hover:bg-primary/80 dark:hover:bg-accent/80 transition-all",
                     variant === "secondary" && "bg-accent dark:bg-primary text-white hover:bg-accent/80 transition-all",
                     variant === "tertiary" && "bg-white text-primary hover:text-white hover:bg-accent/80 transition-all",
@@ -25,9 +25,11 @@ export const Button: React.FC<ButtonProps> = ({ variant, size, icon, iconPositio
                     size === "md" && "text-md",
                     size === "lg" && "text-lg",
                     size === "xl" && "text-xl",
+                    className,
                 )
             }
             {...props}
+            disabled={disabled}
         >
             {icon && iconPosition === "left" &&
                 <span

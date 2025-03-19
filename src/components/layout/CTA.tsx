@@ -9,7 +9,7 @@ export const CTA: React.FC = () => {
             <div className="flex flex-col items-center md:items-start gap-8 md:gap-4">
                 <p className="text-center md:text-start">Whether you have a rough concept or a fully formed vision, we’re here to bring it to life. Let’s chat, brainstorm, and create something amazing together!</p>
                 <Link href={"/contact"}>
-                    <Button variant={"primary"} icon={<ArrowTilted />} iconPosition="right">Get A Quote</Button>
+                    <Button variant={"primary"} icon={<ArrowTilted />} iconPosition="right" className="dark:bg-primary">Get A Quote</Button>
                 </Link>
             </div>
         </section>

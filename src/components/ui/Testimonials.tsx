@@ -130,7 +130,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ testimonials, autopl
                     })}
                 </AnimatePresence>
             </div>
-            <div className="hidden md:flex  gap-0 md:gap-4 pt-8 md:pt-12 z-40">
+            <div className="hidden md:flex  gap-0 md:gap-4 z-40">
                 <Button onClick={handlePrev} variant={'dark-outline'} icon={<ArrowLeft />} iconPosition='left'>Previous</Button>
                 <Button onClick={handleNext} variant={'dark-outline'} icon={<ArrowRight />} iconPosition='right'>Next</Button>
             </div>

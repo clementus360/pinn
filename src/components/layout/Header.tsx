@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
             <div className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
                 {/* Logo */}
                 <Link href="/">
-                        <Logo className="w-40" />
+                    <Logo className="w-40" />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -64,7 +64,9 @@ export const Header: React.FC = () => {
                         </Link>
                     </div>
 
-                    <ThemeToggle />
+                    <div className="hidden md:block">
+                        <ThemeToggle />
+                    </div>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -87,16 +89,19 @@ export const Header: React.FC = () => {
 
             <div
                 className={cn(
-                    "md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg flex flex-col gap-6 p-6 transition-transform",
+                    "md:hidden fixed top-0 right-0 h-full w-64 bg-white dark:bg-primary shadow-lg flex flex-col gap-6 p-6 transition-transform",
                     isOpen ? "translate-x-0" : "translate-x-full"
                 )}
             >
-                <button
-                    className="self-end text-3xl text-primary dark:text-white"
-                    onClick={() => setIsOpen(false)}
-                >
-                    ✕
-                </button>
+                <div className="w-full flex justify-between items-center">
+                    <ThemeToggle />
+                    <button
+                        className="self-end text-3xl text-primary dark:text-white"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        ✕
+                    </button>
+                </div>
                 <nav>
                     <ul className="flex flex-col gap-4 text-primary dark:text-white font-medium">
                         {navItems.map((item, index) => (

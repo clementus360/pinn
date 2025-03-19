@@ -1,11 +1,9 @@
-import { Button, ArrowTilted, ClientAvatars, AboutVisuals, ServiceCard, WorksVisuals, Testimonials, FAQs, FAQVisuals, TeamCard } from "@/components";
+import { Testimonials, FAQs, FAQVisuals, TeamCard, HeroSection, AboutSection, ServiceSection, WorksSection, FAQSection, TeamSection, TestimonialsSection } from "@/components";
 import { FAQ, Services, Team, Testimonial, Work } from "@/utils/types";
 
 import Member1 from "@/assets/member.png"
 import Member2 from "@/assets/member2.png"
 import Member3 from "@/assets/member3.png"
-
-import Link from "next/link";
 
 const works: Work[] = [
   {
@@ -136,92 +134,19 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-4 text-primary dark:text-white px-4 md:px-16 pb-16">
-      <section className="flex flex-col gap-4 px-4 md:px-40 py-24 md:py-32 items-center justify-center h-max">
-        <h1 className="text-4xl md:text-6xl text-center font-medium text-primary dark:text-white">Creativity That Stands Out, Design That Pinns It Together.</h1>
-        <p className="text-center text-primary dark:text-white md:w-8/12">We design with purpose and precision to elevate your brand. From bold ideas to flawless execution, we create experiences that inspire and captivate.</p>
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center mt-4">
-          <ClientAvatars images={imageUrls} />
-          <Link href={"/contact"}>
-            <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right"> Let&rsquo;s Connect</Button>
-          </Link>
-        </div>
-      </section>
+      <HeroSection imageUrls={imageUrls} />
 
-      <section className="flex flex-col gap-8 md:gap-0 md:flex-row px-4 md:px-16 py-16 bg-primary rounded-4xl">
-        <div className="flex flex-col items-center md:items-start gap-6 w-full">
-          <h2 className="text-center md:text-start text-3xl md:text-5xl font-medium text-white">We Give Your Brand the Design It Deserves</h2>
-          <p className="text-center md:text-start text-white w-10/12">We blend strategy with creativity to craft designs that don’t just look good—they drive results. From brand identity to digital experiences, we create with purpose, ensuring every detail aligns with your vision and business goals.</p>
-          <Link href={"/about"}>
-            <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">More About Us</Button>
-          </Link>
-        </div>
-        <AboutVisuals teamImage={teamImage} workspaceImage={workspaceImage} />
-      </section>
+      <AboutSection teamImage={teamImage} workspaceImage={workspaceImage} />
 
-      <section className="flex flex-col gap-12 px-4 md:px-16 py-12 items-center justify-center h-max">
-        <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
-          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary dark:text-white">Turning Ordinary Into Extraordinary</h2>
-          <p className="text-primary dark:text-white md:w-8/12 text-center">Pinn crafts creative solutions that elevate your brand and drive results. Our focus is on delivering designs and strategies that connect with your audience and make a lasting impact.</p>
-          <Link href={"/services"}>
-            <Button variant="primary" icon={<ArrowTilted />} iconPosition="right">View All</Button>
-          </Link>
-        </div>
-        <div className="flex flex-col md:grid grid-cols-3 gap-8">
-          {services.map((service) => (
-            <ServiceCard key={service.index} index={service.index} title={service.title} description={service.description} icon={service.icon} />
-          ))}
-        </div>
-      </section>
+      <ServiceSection services={services} />
 
-      <section className="flex flex-col md:flex-row items-center gap-8 py-8">
-        <div className="flex flex-nowrap w-full h-96 rounded-4xl overflow-hidden cursor-pointer">
-          {works.map((work, index) => (
-            <WorksVisuals key={index} title={work.title} description={work.description} image={work.image} />
-          ))}
-        </div>
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary dark:text-white">Our Works</h2>
-          <p className="text-primary dark:text-white text-center md:text-start md:w-8/12">A showcase of creativity, strategy, and impact. Explore our work and see how we bring brands to life through thoughtful design.</p>
-          <Link href={"/works"}>
-            <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right">View All</Button>
-          </Link>
-        </div>
-      </section>
+      <WorksSection works={works} />
 
-      <section className="flex flex-col md:flex-row items-center md:gap-8 py-8">
-        <div className="flex flex-col items-center w-11/12 md:items-start gap-4">
-          <h2 className="md:w-10/12 text-center md:text-start text-3xl md:text-5xl font-medium text-primary dark:text-white">Happy Clients, Even Happier Brands</h2>
-          <p className="text-primary dark:text-white text-center md:text-start md:w-8/12">Don’t just take our word for it—see what our clients have to say. Real stories from real brands that have experienced the impact of great design.</p>
-        </div>
-        <div className="w-full">
-          <Testimonials testimonials={testimonials} />
-        </div>
-      </section>
+      <TestimonialsSection testimonials={testimonials} />
 
-      <section className="flex flex-col max-h-max gap-16 md:gap-20 md:flex-row px-4 md:px-16 py-12 bg-primary rounded-4xl transition-all">
-        <FAQVisuals image={faqImage} />
-        <div className="flex w-full flex-col justify-center gap-8 md:gap-4">
-          <h2 className="text-center md:text-start md:w-10/12 text-4xl md:text-5xl font-medium text-white">FAQs</h2>
+      <FAQSection faqImage={faqImage} faqs={faqs} />
 
-          <div className="flex flex-col gap-2 w-full">
-            {faqs.map((faq, index) => (
-              <FAQs key={index} question={faq.question} answer={faq.answer} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-12 py-12 items-center justify-center h-max">
-        <div className="flex flex-col md:px-24 gap-4 items-center justify-center">
-          <h2 className="md:w-10/12 text-center text-3xl md:text-5xl font-medium text-primary dark:text-white">Meet the Creatives Making It Happen</h2>
-          <p className="text-primary dark:text-white md:w-8/12 text-center">Great design doesn’t happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, st yle, and a little bit of magic.</p>
-        </div>
-        <div className="flex flex-col md:grid grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <TeamCard key={index} name={member.name} position={member.position} image={member.image} />
-          ))}
-        </div>
-      </section>
+      <TeamSection team={team} />
 
     </div>
   );

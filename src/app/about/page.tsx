@@ -1,4 +1,4 @@
-import { ArrowTilted, Button, ClientAvatars, Process, ResponsiveVideoPlayer, StatCounter } from "@/components";
+import { AboutHero, ArrowTilted, Button, ClientAvatars, Process, ResponsiveVideoPlayer, StatCounter } from "@/components";
 import Link from "next/link";
 
 import logo1 from "@/assets/logo1.png"
@@ -58,19 +58,8 @@ const videoSrc = "http://commondatastorage.googleapis.com/gtv-videos-bucket/samp
 export default function About() {
     return (
         <div className="flex flex-col gap-16 pb-24 px-4 md:px-24">
-            <section className="flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-16 px-4 py-24 md:py-24 items-center justify-center h-max text-primary dark:text-white">
-                <div className="flex flex-col gap-8 items-center md:items-start justify-between">
-                    <h1 className="text-4xl md:text-6xl text-center md:text-start font-medium text-primary dark:text-white">Redefining Creativity, One Design at a Time</h1>
-                    <Link href={"/contact"}>
-                        <Button variant="dark-outline" icon={<ArrowTilted />} iconPosition="right"> Let&rsquo;s Connect</Button>
-                    </Link>
-                </div>
-
-                <div className="flex flex-col items-center md:items-start gap-4">
-                    <ClientAvatars images={imageUrls} />
-                    <p className="text-center md:text-start text-primary dark:text-white">Hi, we’re Pinn Creative—a collective of designers, strategists, and storytellers passionate about crafting bold, impactful brand experiences. From identity design to digital solutions, we bring ideas to life with precision, creativity, and purpose. Let’s create something unforgettable together.</p>
-                </div>
-            </section>
+            
+            <AboutHero imageUrls={imageUrls} />
 
             <section className="">
                 <ResponsiveVideoPlayer videoSrc={videoSrc} />
@@ -90,7 +79,7 @@ export default function About() {
             <section className="flex flex-col gap-16">
                 <h2 className="text-center text-2xl md:text-4xl font-medium text-primary dark:text-white">Proudly Collaborated With</h2>
 
-                <div className="flex w-full overflow-scroll items-center justify-center gap-16 md:gap-24">
+                <div className="flex flex-col md:flex-row w-full items-center justify-center gap-16 md:gap-24">
                     {partners.map((partner, index) => (
                         <Image key={index} src={partner.logo} alt={partner.name} className="w-40" />
                     ))}

@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
 
                 <div>
                     <Link href={"/contact"}>
-                        <Button variant='secondary'>Get Started</Button>
+                        <Button variant='secondary' className='dark:bg-accent'>Get Started</Button>
                     </Link>
                 </div>
             </div>

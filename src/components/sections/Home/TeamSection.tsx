@@ -22,7 +22,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team }) => {
                     Meet the Creatives Making It Happen
                 </h2>
                 <p className="text-primary dark:text-white md:w-8/12 text-center">
-                    Great design doesn't happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, style, and a little bit of magic.
+                    Great design doesn&rsquo;t happen by accident—it takes a team of creative minds, problem-solvers, and big thinkers. Meet the people behind the work, bringing brands to life with strategy, style, and a little bit of magic.
                 </p>
             </motion.div>
 

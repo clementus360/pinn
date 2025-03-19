@@ -20,7 +20,7 @@ export const WorksHero: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 className="text-center text-primary dark:text-white md:w-8/12"
             >
-                We don't just make things look good—we make them work. Whether it's branding, web design, or ads that stop thumbs mid-scroll, our projects speak for themselves. Check out what we've done, then let's talk about what we can do for you!
+                We don&rsquo;t just make things look good—we make them work. Whether it&rsquo;s branding, web design, or ads that stop thumbs mid-scroll, our projects speak for themselves. Check out what we&rsquo;ve done, then let&rsquo;s talk about what we can do for you!
             </motion.p>
         </section>
     )

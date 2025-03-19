@@ -19,7 +19,7 @@ export const ServicesHero: React.FC = () => {
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 className="text-center text-primary dark:text-white md:w-8/12"
             >
-                At Pinn Creative Hub, we don't just design—we Pinnpoint exactly what makes your brand shine (see what we did there?). Need a logo that slaps? A website that doesn't make people rage-quit? We've got you. Let's make your brand unforgettable
+                At Pinn Creative Hub, we don&rsquo;t just design—we Pinnpoint exactly what makes your brand shine (see what we did there?). Need a logo that slaps? A website that doesn&rsquo;t make people rage-quit? We&rsquo;ve got you. Let&rsquo;s make your brand unforgettable
             </motion.p>
         </section>
     )

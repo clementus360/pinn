@@ -1,6 +1,4 @@
-import { BehanceOutline, Button, ContactForm, GithubOutline, InstagramOutline, LinkedinOutline} from '@/components';
-import { ContactTag } from '@/components/ui/ContactTag';
-import { TextInput } from '@/components/ui/TextInput';
+import { BehanceOutline, ContactForm, GithubOutline, InstagramOutline, LinkedinOutline} from '@/components';
 import Link from 'next/link';
 import React from 'react'
 

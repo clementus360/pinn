@@ -1,4 +1,4 @@
-import { Testimonials, FAQs, FAQVisuals, TeamCard, HeroSection, AboutSection, ServiceSection, WorksSection, FAQSection, TeamSection, TestimonialsSection } from "@/components";
+import { HeroSection, AboutSection, ServiceSection, WorksSection, FAQSection, TeamSection, TestimonialsSection } from "@/components";
 import { FAQ, Services, Team, Testimonial, Work } from "@/utils/types";
 
 import Member1 from "@/assets/member.png"

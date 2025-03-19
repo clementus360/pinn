@@ -1,5 +1,4 @@
-import { AboutHero, ArrowTilted, Button, ClientAvatars, Process, ResponsiveVideoPlayer, StatCounter } from "@/components";
-import Link from "next/link";
+import { AboutHero, Process, ResponsiveVideoPlayer, StatCounter } from "@/components";
 
 import logo1 from "@/assets/logo1.png"
 import logo2 from "@/assets/logo2.png"
@@ -58,7 +57,7 @@ const videoSrc = "http://commondatastorage.googleapis.com/gtv-videos-bucket/samp
 export default function About() {
     return (
         <div className="flex flex-col gap-16 pb-24 px-4 md:px-24">
-            
+
             <AboutHero imageUrls={imageUrls} />
 
             <section className="">

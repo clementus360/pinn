@@ -1,5 +1,3 @@
-import exp from "constants"
-
 // Icon Components
 export * from "./icons/Logo"
 export * from "./icons/ArrowTilted"

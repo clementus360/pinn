@@ -60,7 +60,7 @@ export const AboutHero: React.FC<AboutHeroProps> = ({ imageUrls }) => {
                     transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
                     className="text-center md:text-start text-primary dark:text-white"
                 >
-                    Hi, we're Pinn Creative—a collective of designers, strategists, and storytellers passionate about crafting bold, impactful brand experiences. From identity design to digital solutions, we bring ideas to life with precision, creativity, and purpose. Let's create something unforgettable together.
+                    Hi, we&rsquo;re Pinn Creative—a collective of designers, strategists, and storytellers passionate about crafting bold, impactful brand experiences. From identity design to digital solutions, we bring ideas to life with precision, creativity, and purpose. Let&rsquo;s create something unforgettable together.
                 </motion.p>
             </motion.div>
         </section>

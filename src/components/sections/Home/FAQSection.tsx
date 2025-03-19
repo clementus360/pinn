@@ -24,7 +24,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ faqImage, faqs }) => {
             </motion.div>
 
             <div className="flex w-full flex-col justify-center gap-8 md:gap-4">
-                {/* FAQ Title Animation */}
+
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,6 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ faqImage, faqs }) => {
                     FAQs
                 </motion.h2>
 
-                {/* FAQ Questions Animation */}
                 <motion.div
                     className="flex flex-col gap-2 w-full"
                     initial="hidden"

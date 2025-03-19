@@ -27,10 +27,10 @@ export const Header: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white dark:bg-primary shadow-md z-50">
-            <div className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
+            <div className="flex items-center justify-between px-6 py-6 max-w-6xl mx-auto">
                 {/* Logo */}
                 <Link href="/">
-                    <Logo className="w-40" />
+                    <Logo className="w-24 md:w-40" />
                 </Link>
 
                 {/* Desktop Navigation */}

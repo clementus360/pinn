@@ -11,7 +11,7 @@ export interface Services {
     index: number;
     title: string;
     description: string;
-    icon: React.ReactNode;
+    image: string;
 }
 
 export interface FAQ {

@@ -12,7 +12,7 @@ interface NavItem {
 const navItems: NavItem[] = [
     { title: "Home", link: "/" },
     { title: "About Us", link: "/about" },
-    { title: "Our Work", link: "/work" },
+    { title: "Our Work", link: "/works" },
     { title: "Our Services", link: "/services" },
 ];
 
@@ -44,20 +44,20 @@ export const Footer: React.FC = () => {
             <div className='h-[0.4px] w-full bg-white'></div>
 
             <div className='flex flex-col gap-8 md:flex-row-reverse w-full items-center justify-between'>
-                <div className='flex gap-8'>
-                    <Link href={"#"} className='w-6 h-6 text-white'>
+                <div className='flex gap-4 items-center justify-center'>
+                    <Link href={"#"} className='w-4 h-4 hover:scale-110 text-white transition-all'>
                         <Instagram />
                     </Link>
 
-                    <Link href={"#"} className='w-6 h-6 text-white'>
+                    <Link href={"#"} className='w-4 h-4 hover:scale-110 text-white transition-all'>
                         <Youtube />
                     </Link>
 
-                    <Link href={"#"} className='w-6 h-6 text-white'>
+                    <Link href={"#"} className='w-4 h-4 hover:scale-110 text-white transition-all'>
                         <Github />
                     </Link>
 
-                    <Link href={"#"} className='w-6 h-6 text-white'>
+                    <Link href={"#"} className='w-4 h-4 hover:scale-110 text-white transition-all'>
                         <Facebook />
                     </Link>
                 </div>

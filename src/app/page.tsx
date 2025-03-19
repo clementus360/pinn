@@ -63,19 +63,19 @@ const services: Services[] = [
     index: 1,
     title: "Brand Identity",
     description: "We create brand identities that reflect your unique story and values, helping you stand out in a crowded marketplace.",
-    icon: <div></div>
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1742392350/Pinn/e6pfp6mfllujl0mehcbb.jpg"
   },
   {
     index: 2,
     title: "Web Design",
     description: "Our web designs are more than just pretty—they’re intuitive, user-friendly, and built to convert.",
-    icon: <div></div>
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1742391392/Pinn/ibaqelr23nfacrz2yxqe.jpg"
   },
   {
     index: 3,
     title: "Digital Marketing",
     description: "We help you reach your audience and grow your business with data-driven digital marketing strategies.",
-    icon: <div></div>
+    image: "https://res.cloudinary.com/dpfonnjv3/image/upload/v1742391409/Pinn/t1wcg48plp8c2x7zhggw.jpg"
   }
 ]
 
@@ -147,7 +147,6 @@ export default function Home() {
       <FAQSection faqImage={faqImage} faqs={faqs} />
 
       <TeamSection team={team} />
-
     </div>
   );
 }

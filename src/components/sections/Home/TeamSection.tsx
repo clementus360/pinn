@@ -10,7 +10,6 @@ interface TeamSectionProps {
 export const TeamSection: React.FC<TeamSectionProps> = ({ team }) => {
     return (
         <section className="flex flex-col gap-12 px-4 md:px-16 py-12 items-center justify-center h-max">
-            {/* Title & Description Animation */}
             <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -26,7 +25,6 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team }) => {
                 </p>
             </motion.div>
 
-            {/* Team Cards Animation */}
             <motion.div
                 className="flex flex-col md:grid grid-cols-3 gap-8"
                 initial="hidden"

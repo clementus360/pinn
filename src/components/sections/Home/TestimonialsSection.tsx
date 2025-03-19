@@ -11,7 +11,6 @@ interface TestimonialSectionProps {
 export const TestimonialsSection: React.FC<TestimonialSectionProps> = ({ testimonials }) => {
     return (
         <section className="flex flex-col md:flex-row items-center md:gap-8 py-8">
-            {/* Title & Description Animation */}
             <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -27,7 +26,6 @@ export const TestimonialsSection: React.FC<TestimonialSectionProps> = ({ testimo
                 </p>
             </motion.div>
 
-            {/* Testimonials Animation */}
             <motion.div
                 className="w-full"
                 initial="hidden"

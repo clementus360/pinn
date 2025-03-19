@@ -12,7 +12,7 @@ interface WorksSectionProps {
 export const WorksSection: React.FC<WorksSectionProps> = ({ works }) => {
     return (
         <section className="flex flex-col md:flex-row items-center gap-8 py-8">
-            {/* Works Visuals Animation */}
+
             <motion.div
                 className="flex flex-nowrap w-full h-96 rounded-4xl overflow-hidden cursor-pointer"
                 initial="hidden"
@@ -28,7 +28,6 @@ export const WorksSection: React.FC<WorksSectionProps> = ({ works }) => {
                 ))}
             </motion.div>
 
-            {/* Title & Button Animation */}
             <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}

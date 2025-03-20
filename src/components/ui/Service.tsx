@@ -24,8 +24,8 @@ export interface ServiceProps {
 export const Service: React.FC<ServiceProps> = ({ title, description, cta, perks, image, variant }) => {
     return (
         <div className={cn(
-            "flex gap-16 items-center",
-            variant === "right" ? "flex-row" : "flex-row-reverse"
+            "flex flex-col gap-16 items-center",
+            variant === "right" ? "md:flex-row" : "md:flex-row-reverse"
         )}>
             <motion.div
                 initial={{

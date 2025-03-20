@@ -26,7 +26,7 @@ export const FAQs: React.FC<FAQProps> = ({ question, answer }) => {
                 </h3>
                 <button
                     onClick={toggleFaqs}
-                    className="text-5xl text-accent transition-transform duration-300"
+                    className="text-5xl text-accent transition-transform cursor-pointer duration-300"
                 >
                     {open ? "−" : "+"}
                 </button>

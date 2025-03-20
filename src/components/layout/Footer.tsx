@@ -1,8 +1,6 @@
-import Image from 'next/image';
-import logo from '@/assets/logo-w.png';
 import { Button } from '../ui/Button';
 import Link from 'next/link';
-import { Facebook, Github, Instagram, Youtube } from '..';
+import { Facebook, Github, Instagram, Logo, Youtube } from '..';
 
 interface NavItem {
     title: string;
@@ -21,8 +19,8 @@ export const Footer: React.FC = () => {
         <footer className='flex flex-col gap-8 md:gap-4 px-4 md:px-24 py-8 items-center justify-center h-max bg-primary'>
 
             <div className='flex flex-col md:flex-row gap-12 md:gap-0 items-center justify-between w-full'>
-                <Link href={'/'}>
-                    <Image src={logo} alt='Pinn Creative Hub' className='w-auto h-16' />
+                <Link href="/">
+                    <Logo className="w-24 md:w-40 text-white" />
                 </Link>
 
                 <nav>

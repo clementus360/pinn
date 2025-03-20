@@ -30,7 +30,6 @@ export * from "./icons/LightMode"
 export * from "./layout/GradientBackground"
 export * from "./layout/Footer"
 export * from "./layout/Header"
-export * from "./layout/ImageGallery"
 
 // UI Components
 export * from "./ui/Button"
@@ -56,7 +55,7 @@ export * from "./cards/TeamCard"
 
 
 // Section Components
-export * from "./sections/WorkSection"
+export * from "./sections/WorkCard"
 export * from "./sections/Home/HeroSection"
 export * from "./sections/Home/AboutSection"
 export * from "./sections/Home/ServiceSection"

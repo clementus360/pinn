@@ -9,7 +9,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     { title: "Home", link: "/" },
-    { title: "About Us", link: "/about" },
+    // { title: "About Us", link: "/about" },
     { title: "Our Work", link: "/works" },
     { title: "Our Services", link: "/services" },
 ];

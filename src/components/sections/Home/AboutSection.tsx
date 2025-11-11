@@ -1,8 +1,7 @@
 "use client"
 
-import Link from "next/link";
 import { motion } from "motion/react";
-import { AboutVisuals, ArrowTilted, Button } from "../..";
+import { AboutVisuals} from "../..";
 
 interface AboutSectionProps {
     teamImage: string;

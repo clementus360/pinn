@@ -1,8 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowTilted, Button, WorksVisuals } from "../.."
+import { WorksVisuals } from "../.."
 import { Work } from "@/utils/types"
 
 interface WorksSectionProps {

@@ -136,11 +136,11 @@ export default function Home() {
     <div className="flex flex-col gap-4 text-primary dark:text-white px-4 md:px-16 pb-16">
       <HeroSection imageUrls={imageUrls} />
 
+      <WorksSection works={works} />
+
       <AboutSection teamImage={teamImage} workspaceImage={workspaceImage} />
 
       <ServiceSection services={services} />
-
-      <WorksSection works={works} />
 
       <TestimonialsSection testimonials={testimonials} />
 

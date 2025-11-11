@@ -21,7 +21,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ teamImage, workspace
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                className="flex flex-col items-center md:items-start gap-6 w-full"
+                className="flex flex-col items-center justify-center md:items-start gap-6 w-full"
             >
                 <h2 className="text-center md:text-start text-3xl md:text-5xl font-medium text-white">
                     We Give Your Brand the Design It Deserves
@@ -31,13 +31,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ teamImage, workspace
                     From brand identity to digital experiences, we create with purpose, ensuring every detail aligns with
                     your vision and business goals.
                 </p>
-                <Link href={"/about"}>
+                {/* <Link href={"/about"}>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Button variant="outline" icon={<ArrowTilted />} iconPosition="right">
                             More About Us
                         </Button>
                     </motion.div>
-                </Link>
+                </Link> */}
             </motion.div>
             <motion.div
                 className="w-full md:w-full flex justify-center"

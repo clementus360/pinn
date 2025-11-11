@@ -14,7 +14,7 @@ export const WorksSection: React.FC<WorksSectionProps> = ({ works }) => {
         <section className="flex flex-col md:flex-row items-center gap-8 py-8">
 
             <motion.div
-                className="flex flex-nowrap w-full h-96 rounded-4xl overflow-hidden cursor-pointer"
+                className="flex flex-nowrap w-full h-[80vh] rounded-4xl overflow-hidden cursor-pointer"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -28,7 +28,7 @@ export const WorksSection: React.FC<WorksSectionProps> = ({ works }) => {
                 ))}
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -46,7 +46,7 @@ export const WorksSection: React.FC<WorksSectionProps> = ({ works }) => {
                         View All
                     </Button>
                 </Link>
-            </motion.div>
+            </motion.div> */}
         </section>
     )
 }
